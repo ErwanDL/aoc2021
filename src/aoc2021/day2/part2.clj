@@ -11,11 +11,11 @@
     "up" [horiz depth (- aim value)]))
 
 
-(defn compute-position [inputs]
+(defn compute-final-position [inputs]
   (reduce update-position [0 0 0] inputs))
 
 (defn run [filename]
   (let [input (util/load-input (str "resources/day2/" filename))
         input (part1/parse-input input)
-        [horiz depth _] (compute-position input)]
+        [horiz depth _] (compute-final-position input)]
     (* horiz depth)))
