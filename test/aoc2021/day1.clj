@@ -3,7 +3,7 @@
             [aoc2021.day1.part1 :as part1]
             [aoc2021.day1.part2 :as part2]))
 
-(deftest test-day1
+(deftest test-inputs
   (testing "Day 1, part 1"
     (is (= 7 (part1/run "test.txt")))
     (is (= 1688 (part1/run "input.txt"))))
