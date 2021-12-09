@@ -24,15 +24,13 @@
     (map (fn [[val marked]]
            (if (= drawn val) [val true] [val marked])) line)))
 
-(defn transpose [board]
-  (apply mapv vector board))
 
 (defn complete? [row]
   (every? #(true? (second %)) row))
 
 (defn wins? [board]
   (or (some true? (map complete? board))
-      (some true? (map complete? (transpose board)))))
+      (some true? (map complete? (util/transpose board)))))
 
 (defn first-winner [numbers boards]
   (loop [marked-boards boards

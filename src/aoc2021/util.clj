@@ -4,3 +4,7 @@
 
 (defn load-input [file-name]
   (str/split-lines (slurp file-name)))
+
+
+(defn transpose [m]
+  (apply mapv vector m))
