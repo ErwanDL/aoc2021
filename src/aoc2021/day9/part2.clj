@@ -18,8 +18,6 @@
                (expand-basin %1 %2 heightmap)
                %1) basin next-pos)))
 
-
-
 (defn add-pos-to-diff-map [diff-map]
   (map-indexed (fn [i row]
                  (map-indexed #(conj %2 [i %1]) row)) diff-map))
