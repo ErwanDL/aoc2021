@@ -13,7 +13,7 @@
    (if (zero? (count next-tokens))
      opened-chunks
      (let [[tok & rest] next-tokens]
-       (if (contains? #{\( \{ \[ \<}  tok)
+       (if (contains? #{\( \{ \[ \<} tok)
          (recur rest (conj opened-chunks tok))
          (if (matches? tok (peek opened-chunks))
            (recur rest (pop opened-chunks))
