@@ -1,1 +1,5 @@
 # Advent of Code 2021 - My Clojure solutions!
+
+Decided to add some spicyness to the AoC this year by doing it in a language that I don't use frequently and that adopts a very different paradigm compared to what I usually work with : my main languages (Python, Rust, C++...) are mostly object-oriented and imperative; whereas Clojure is a LISP, thus functional and puts a strong focus on immutability, basic data structures, recursion rather than iteration, and seeing algorithms as a sequence of transformations on data rather than modifying existing data in place.
+
+Some of these solutions are still vastly unoptimized and take a long time to run (sometimes >1s) compared to my C++ solutions of last year: writing algorithms in Clojure is already a challenge in and of itself, and since I also have a full-time job I don't think I will have the time to further optimize my solutions this year.
