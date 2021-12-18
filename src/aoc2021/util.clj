@@ -5,6 +5,16 @@
 (defn load-input [file-name]
   (str/split-lines (slurp file-name)))
 
+(defn exp [x n]
+  (reduce * (repeat n x)))
+
+(defn binary-to-decimal [binary]
+  (->> binary
+       (reduce (fn [[val exponent] bit]
+                 [(+ val (* bit (exp 2 exponent))) (dec exponent)])
+               [0 (dec (count binary))])
+       (first)))
+
 (defn new-matrix [x y val]
   (vec (repeat x (vec (repeat y val)))))
 
