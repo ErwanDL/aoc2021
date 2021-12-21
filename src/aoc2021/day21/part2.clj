@@ -10,6 +10,7 @@
                    7 6
                    8 3
                    9 1})
+
 (defn swap-if-needed [cache-wins curr-player]
   (if (zero? curr-player) cache-wins (vec (reverse cache-wins))))
 
