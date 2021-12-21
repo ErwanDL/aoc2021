@@ -7,8 +7,8 @@
 
 ;; ALGORITHM EXPLANATION:
 ;; - For each scanner, I compute the differences between its pairs of beacons,
-;;  and then store these as sets of absolute values (so if beacon_a - beacon_b = [x, y, z]),
-;;  I will store #{abs(x), abs(y), abs(z)}. I call these "diffs".
+;;   and then store these as sets of absolute values: if (beacon_a - beacon_b) = [x, y, z],
+;;   I will store #{abs(x), abs(y), abs(z)}. I call these sets "diffs".
 ;; - For each pair of scanner, I check if they have at least 66 "diffs" in common.
 ;;   If yes, it means (unless a malicious input has been hand-crafted) that these two scanners
 ;;   have 12 beacons in common, and so I resolve which beacons of scanner A correspond
